@@ -1,0 +1,6 @@
+﻿Critère,Embedding,DistilBERT
+Accuracy,~0.95–0.97,0.99
+F1 spam,~0.93–0.95,0.98
+Compréhension du contexte,Faible,Excellente
+Robustesse,Moyenne,Très élevée
+Temps d’entraînement,Très rapide,Plus long

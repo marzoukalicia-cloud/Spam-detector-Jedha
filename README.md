@@ -43,14 +43,18 @@ Dans un système de filtrage télécom, le coût d'un **Faux Positif** (bloquer 
 ## 📂 Structure du Répertoire GitHub
 
 ```text
-📦 AT-T_Spam_Detector
+📦 Spam-detector-Jedha
  ┣ 📂 notebook
  ┃ ┗ 📜 AT&T_spam_detector_AMK.ipynb  # Pipeline d'entraînement complet (PyTorch & Hugging Face)
  ┣ 📂 data
- ┃ ┣ 📜 spam.csv                     # Dataset d'entrée brut (5 572 SMS étiquetés)
- ┃ ┗ 📜 crit-re-embedding-5.csv       # Synthèse des critères et métriques de performance
+ ┃ ┗ 📜 spam.csv                     # Dataset d'entrée brut (5 572 SMS étiquetés)
  ┣ 📂 outputs
- ┃ ┗ 📂 viz                          # Courbes d'apprentissage extraites du monitoring
- ┃   ┣ 📜 accuracy V1.png            # Évolution de la précision par époque (Baseline)
- ┃   ┗ 📜 train loss V1.png          # Convergence de la fonction de coût (Baseline)
+ ┃ ┗ 📂 data
+ ┃   ┣📜 crit-re-embedding-5.csv       # Synthèse des critères et métriques de performance
+ ┃   ┗📜 spam extract.xlsx            # Extrait de données pour les phases de validation manuelle
+ ┃ ┗ 📂 viz                          
+ ┃   ┣📜 Courbes d'accuracy — Modèle Embedding    # Historique global de la précision (Train vs Val) sur 10 époques  
+ ┃   ┣📜 Courbes de loss — Modèle Embedding       # Décroissance globale de la fonction de coût (Cross-Entropy 
+ ┃   ┣📜 accuracy V1.png            # Focus haute résolution sur la stabilisation du plateau d'accuracy (~99.1%)
+ ┃   ┗📜 train loss V1.png          # Focus sur l'optimisation de la perte minimale en fin d'entraînement (~0.02)
  ┗ 📜 README.md                      # Documentation technique du projet
